@@ -1,0 +1,197 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f0f2f5;
+  color: #222;
+  line-height: 1.5;
+}
+
+header {
+  background-color: #0f766e;
+  color: #fff;
+  text-align: center;
+  padding: 24px 16px;
+}
+
+header h1 {
+  margin: 0 0 4px;
+}
+
+header p {
+  margin: 0;
+}
+
+main {
+  max-width: 700px;
+  margin: 24px auto;
+  padding: 0 16px;
+}
+
+section {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  margin-top: 0;
+}
+
+footer {
+  text-align: center;
+  padding: 16px;
+  color: #555;
+}
+
+/* Form */
+#note-form {
+  display: flex;
+  gap: 12px;
+  align-items: flex-end;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+}
+
+.field.grow {
+  flex: 1;
+}
+
+label {
+  font-weight: bold;
+  font-size: 0.9rem;
+  margin-bottom: 4px;
+}
+
+input,
+select {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #bbb;
+  border-radius: 6px;
+}
+
+button {
+  padding: 10px 16px;
+  font-size: 1rem;
+  background-color: #0f766e;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #115e59;
+}
+
+#error-message {
+  color: #c00;
+  font-weight: bold;
+  min-height: 1.5em;
+  margin: 10px 0 0;
+}
+
+/* Notes */
+#search-input {
+  width: 100%;
+}
+
+#notes-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.note-card {
+  border: 1px solid #ddd;
+  border-left: 6px solid #888;
+  border-radius: 8px;
+  padding: 12px 14px;
+  margin-bottom: 12px;
+  background-color: #fff;
+}
+
+.category-personal {
+  border-left-color: #0d9488;
+}
+
+.category-work {
+  border-left-color: #991b1b;
+}
+
+.category-study {
+  border-left-color: #2563eb;
+}
+
+.note-text {
+  margin: 0 0 8px;
+  overflow-wrap: anywhere;
+}
+
+.note-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+.note-info {
+  font-size: 0.85rem;
+  color: #555;
+}
+
+.note-label {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  margin-right: 8px;
+}
+
+.category-personal .note-label {
+  color: #0d9488;
+}
+
+.category-work .note-label {
+  color: #991b1b;
+}
+
+.category-study .note-label {
+  color: #2563eb;
+}
+
+.delete-btn {
+  background-color: #b91c1c;
+  padding: 6px 10px;
+  font-size: 0.85rem;
+}
+
+.delete-btn:hover {
+  background-color: #7f1d1d;
+}
+
+.empty-message {
+  color: #666;
+  font-style: italic;
+}
+
+/* Small screens */
+@media (max-width: 600px) {
+  #note-form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .note-footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
